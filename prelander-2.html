@@ -266,10 +266,10 @@
     }
 
     .code {
-      font-family: "Consolas", "Courier New", monospace;
-      font-size: calc(var(--u) * 1.7);
+      font-family: Cinzel, "Trajan Pro", Georgia, serif;
+      font-size: calc(var(--u) * 1.6);
       font-weight: 900;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.04em;
       color: var(--gold);
     }
 
@@ -363,17 +363,16 @@
 
     <main>
       <section class="copy">
-        <div class="pill"><span class="live"></span>Update 2.2 live · Mid-Autumn event</div>
+        <div class="pill"><span class="live"></span>New update live · Limited-time events</div>
         <h1>Your Wuxia Legend <span>Starts Free Today.</span></h1>
         <ul class="rewards">
-          <li><span class="ico">🎁</span><span><b>Free Legendary Gear</b> just for logging in daily</span></li>
-          <li><span class="ico">🌕</span><span><b>Mid-Autumn gifts</b>: limited-time log-in rewards</span></li>
-          <li><span class="ico">🎴</span><span><b>Free pulls</b>: Resonating Melody + 100 Echo Jade</span></li>
+          <li><span class="ico">🎁</span><span><b>Free starter rewards</b> for every new hero</span></li>
+          <li><span class="ico">🎴</span><span><b>Bonus codes &amp; free pulls</b> to boost your start</span></li>
+          <li><span class="ico">🌕</span><span><b>Limited-time events</b> live right now</span></li>
         </ul>
         <div class="code-box">
-          <div class="code-label">Bonus code<small>100 Echo Jade · 20,000 Coins · 1 Melody</small></div>
-          <div class="code" id="code">QINCHUAN0430</div>
-          <button class="copy-btn" id="copyBtn" type="button">Copy</button>
+          <div class="code">🎁 FREE STARTER REWARDS</div>
+          <div class="code-label">Claim them<small>in-game after install</small></div>
         </div>
         <div class="cta-area">
           <div class="cta-wrap">
@@ -394,18 +393,6 @@
       cta.href = cta.href + window.location.search;
     }
 
-    // Copy the bonus code (also on CTA click, so it is ready to paste in-game).
-    const code = document.getElementById("code").textContent.trim();
-    const copyBtn = document.getElementById("copyBtn");
-    function copyCode() {
-      try { navigator.clipboard.writeText(code); } catch (e) {}
-    }
-    copyBtn.addEventListener("click", () => {
-      copyCode();
-      copyBtn.textContent = "Copied!";
-      setTimeout(() => { copyBtn.textContent = "Copy"; }, 1800);
-    });
-    cta.addEventListener("click", copyCode);
   </script>
 </body>
 </html>
